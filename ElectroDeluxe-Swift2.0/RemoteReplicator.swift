@@ -34,7 +34,8 @@ class RemoteReplicator: ReplicatorProtocol {
     
     func pull(endpoint:APIEndpoint){
         
-        guard let token = isTokenPresent where token else {
+        guard let tokenAvailable = isTokenPresent where tokenAvailable else {
+            print("token is not present")
             return
         }
         
