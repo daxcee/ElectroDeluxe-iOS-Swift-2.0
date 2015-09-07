@@ -1,4 +1,57 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Album" syncable="YES">
+        <attribute name="artists" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="genres" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Artist" representedClassName="Artist" syncable="YES">
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebookURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="soundcloudID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="soundcloudTrackListURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="soundcloudURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Artist" inverseName="tracks" inverseEntity="Artist" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="artists" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="venue" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Genre" representedClassName="Genre" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subGenres" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <entity name="News" representedClassName="News" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Track" representedClassName="Track" syncable="YES">
+        <attribute name="albums" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="artists" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="genres" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Video" representedClassName="Video" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Artist" positionX="-414" positionY="0" width="128" height="165"/>
+        <element name="News" positionX="-234" positionY="54" width="128" height="105"/>
+        <element name="Track" positionX="-54" positionY="27" width="128" height="120"/>
+        <element name="Event" positionX="-234" positionY="54" width="128" height="150"/>
+        <element name="Video" positionX="-225" positionY="63" width="128" height="75"/>
+        <element name="Genre" positionX="-216" positionY="72" width="128" height="75"/>
+        <element name="Album" positionX="-207" positionY="108" width="128" height="90"/>
+    </elements>
 </model>
