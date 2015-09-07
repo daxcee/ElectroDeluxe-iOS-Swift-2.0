@@ -85,7 +85,7 @@
          <EnvironmentVariable
             key = "FLOW_API_TOKEN"
             value = "2g1ddDNAF2RKdriuzGVZnZ"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>

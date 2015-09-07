@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Debug - location of sqlite db file
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
-        print("Debug - location of sqlite db file:\n\(paths[0])")
+        print("Debug - location of sqlite db file:\n\(paths[0])\n")
 
         return true
     }
