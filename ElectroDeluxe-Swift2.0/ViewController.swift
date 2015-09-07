@@ -14,6 +14,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        let replicator:RemoteReplicator = RemoteReplicator.sharedInstance
+        replicator.pull(APIEndpoint.News)
+        replicator.pull(APIEndpoint.Artists)
+        replicator.pull(APIEndpoint.Events)
+        //replicator.pull(APIEndpoint.Albums)
+        //replicator.pull(APIEndpoint.Genres)
+        //replicator.pull(APIEndpoint.Videos)
+        //replicator.pull(APIEndpoint.Tracks)
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

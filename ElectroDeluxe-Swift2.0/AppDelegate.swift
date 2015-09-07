@@ -19,17 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Debug - location of sqlite db file
         let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
         print(paths[0])
-        
-        // Override point for customization after application launch.
-        let replicator:RemoteReplicator = RemoteReplicator.sharedInstance
-        replicator.pull(APIEndpoint.News)
-        //replicator.pull(APIEndpoint.Albums)
-        replicator.pull(APIEndpoint.Artists)
-        replicator.pull(APIEndpoint.Events)
-        //replicator.pull(APIEndpoint.Genres)
-        //replicator.pull(APIEndpoint.Videos)
-        //replicator.pull(APIEndpoint.Tracks)
-
 
         return true
     }
