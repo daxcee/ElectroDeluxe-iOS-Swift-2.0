@@ -14,7 +14,8 @@ class RemoteReplicator: ReplicatorProtocol {
     private var flowAPI:FlowAPI!
     private var token:String!
     private var persistenceManager:PersistenceManager!
-
+    private var isTokenPresent:Bool!
+    
     //Utilize Singleton pattern by instanciating Replicator only once.
     class var sharedInstance: RemoteReplicator {
         struct Singleton {
@@ -27,16 +28,15 @@ class RemoteReplicator: ReplicatorProtocol {
     init() {
         self.httpClient = HTTPClient()
         self.flowAPI = FlowAPI.sharedInstance
-        
-        //TOKEN PASSED AS ENVIRONMENT VAR 
-        //set via Edit Scheme -> Environment variables, add Key=FLOW_API_TOKEN Value=token_value
-        let env = NSProcessInfo.processInfo().environment
-        self.token = env["FLOW_API_TOKEN"]
-        
         self.persistenceManager = PersistenceManager()
+        isTokenPresent = self.checkIfTokenIsPresent()
     }
     
     func pull(endpoint:APIEndpoint){
+        
+        guard let _ = isTokenPresent else {
+            return
+        }
         
         switch endpoint {
             case .News:
@@ -145,5 +145,21 @@ class RemoteReplicator: ReplicatorProtocol {
                 persistenceManager.saveItems(response, entity: entity)
                 break
         }
+    }
+    
+    private func checkIfTokenIsPresent() -> Bool {
+        let appDelegate : AppDelegate = AppDelegate().sharedInstance()
+
+        do{
+            try self.token = appDelegate.getAPIToken()
+        } catch AuthError.TokenIsMissing {
+            print("token needs to be set: set via Edit Scheme -> Environment variables, add Key=FLOW_API_TOKEN Value=token_value\nA valid token can be requested via: https://flow-api.herokuapp.com/token-request")
+            return false
+        } catch{
+            print("Could not read token, check if Environment var is set properly")
+            return false
+        }
+        
+        return true
     }
 }

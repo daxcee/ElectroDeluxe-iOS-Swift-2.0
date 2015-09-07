@@ -13,6 +13,10 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //TOKEN PASSED AS ENVIRONMENT VAR
+    //set via Edit Scheme -> Environment variables, add Key=FLOW_API_TOKEN Value=token_value
+    private var tokenNamespace = "FLOW_API_TOKEN"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -33,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {}
     
-    
     func sharedInstance() -> AppDelegate {
         return UIApplication.sharedApplication().delegate as! AppDelegate
     }
@@ -45,5 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var contextManager: ContextManager = {
         return ContextManager()
     }()
+    
+    func getAPIToken() throws -> String? {
+        
+        let env = NSProcessInfo.processInfo().environment
+        
+        guard let token:String = env[tokenNamespace] where token.characters.count > 0 else {
+            throw AuthError.TokenIsMissing
+        }
+        
+        return env[tokenNamespace]!
+    }
 }
 
