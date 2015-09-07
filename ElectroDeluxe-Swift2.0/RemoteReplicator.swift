@@ -56,22 +56,54 @@ class RemoteReplicator: ReplicatorProtocol {
                 doRequest(createRequestURL(flowAPI.newsEndpoint.getPath(),params: params), entityType: EntityType.News)
                 break
             case .Artists:
-                doRequest(createRequestURL(flowAPI.artistsEndpoint.getPath()), entityType: EntityType.Artist)
+                //set query parameters:
+                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                let params:Dictionary<String,AnyObject> = [
+                   APIParameters.token.rawValue:token
+                ]
+
+                doRequest(createRequestURL(flowAPI.artistsEndpoint.getPath(),params: params), entityType: EntityType.Artist)
                 break
             case .Tracks:
-                doRequest(createRequestURL(flowAPI.tracksEndpoint.getPath()), entityType: EntityType.Track)
+                //set query parameters:
+                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                let params:Dictionary<String,AnyObject> = [
+                    APIParameters.token.rawValue:token
+                ]
+
+                doRequest(createRequestURL(flowAPI.tracksEndpoint.getPath(),params: params), entityType: EntityType.Track)
                 break
             case .Albums:
-                doRequest(createRequestURL(flowAPI.albumsEndpoint.getPath()), entityType: EntityType.Album)
+                //set query parameters:
+                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                let params:Dictionary<String,AnyObject> = [
+                    APIParameters.token.rawValue:token
+                ]
+                doRequest(createRequestURL(flowAPI.albumsEndpoint.getPath(),params: params), entityType: EntityType.Album)
                 break
             case .Events:
-                doRequest(createRequestURL(flowAPI.eventsEndpoint.getPath()), entityType: EntityType.Event)
+                //set query parameters:
+                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                let params:Dictionary<String,AnyObject> = [
+                    APIParameters.token.rawValue:token
+                ]
+                doRequest(createRequestURL(flowAPI.eventsEndpoint.getPath(),params: params), entityType: EntityType.Event)
                 break
             case .Videos:
-                doRequest(createRequestURL(flowAPI.videosEndpoint.getPath()), entityType: EntityType.Video)
+                //set query parameters:
+                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                let params:Dictionary<String,AnyObject> = [
+                    APIParameters.token.rawValue:token
+                ]
+                doRequest(createRequestURL(flowAPI.videosEndpoint.getPath(),params: params), entityType: EntityType.Video)
                 break
             case .Genres:
-                doRequest(createRequestURL(flowAPI.genresEndpoint.getPath()), entityType: EntityType.Genre)
+                //set query parameters:
+                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                let params:Dictionary<String,AnyObject> = [
+                    APIParameters.token.rawValue:token
+                ]
+                doRequest(createRequestURL(flowAPI.genresEndpoint.getPath(),params: params), entityType: EntityType.Genre)
                 break
         }
     }
