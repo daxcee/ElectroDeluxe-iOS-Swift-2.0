@@ -17,6 +17,7 @@ enum APIEndpoint:String {
     case Albums = "albums"
     case Genres = "genres"
     case Videos = "videos"
+    case Authenticate = "authenticate"
 
-    static let getAll = [News, Artists, Tracks, Events, Albums, Genres, Videos]
+    static let getAll = [News, Artists, Tracks, Events, Albums, Genres, Videos, Authenticate]
 }

@@ -17,7 +17,8 @@ enum EntityType:String {
     case Video = "Video"
     case Genre = "Genre"
     case Event = "Event"
+    case User = "User"
 
-    static let getAll = [News,Artist,Track,Album,Video,Genre,Event]
+    static let getAll = [News,Artist,Track,Album,Video,Genre,Event,User]
 }
 

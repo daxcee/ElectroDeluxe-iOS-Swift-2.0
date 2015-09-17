@@ -18,7 +18,7 @@ class HTTPClient {
         urlSession = NSURLSession(configuration: sessionConfiguration)
     }
     
-    func setAdditionalHeaders(headers: Dictionary<String, String>){
+    func setAdditionalHeaders(headers: Dictionary<String, AnyObject>){
         sessionConfiguration.HTTPAdditionalHeaders = headers
     }
     

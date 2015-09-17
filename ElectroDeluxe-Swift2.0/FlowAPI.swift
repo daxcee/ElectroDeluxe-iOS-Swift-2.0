@@ -23,6 +23,13 @@ enum APIParameters : String {
     static let getAll = [fields,sort,order,token,result,limit,offset,asc,desc]
 }
 
+enum APIHeaders: String {
+    case authorization = "authorization"
+    case connection = "connection"
+    case host = "host"
+    case wwwAuthenticate = "www-authenticate"
+}
+
 class FlowAPI {
     
     private var news:NewsEndpoint!
@@ -32,7 +39,12 @@ class FlowAPI {
     private var genres:GenreEndpoint!
     private var events:EventEndpoint!
     private var albums:AlbumEndpoint!
-    private var basePath:String = "https://flow-api.herokuapp.com/api/v1/"
+    private var authenticate:AuthenticateEndpoint!
+    
+    //private var basePath:String = "https://flow-api.herokuapp.com"
+    private var basePath:String = "http://localhost:3000"
+    private var api:String = "/api/v1/"
+    
     private var resultLimit = 4000
     
     class var sharedInstance: FlowAPI {
@@ -51,10 +63,11 @@ class FlowAPI {
         self.genres = GenreEndpoint()
         self.events = EventEndpoint()
         self.albums = AlbumEndpoint()
+        self.authenticate = AuthenticateEndpoint()
     }
     
     lazy var defaultBasePath:String = {
-       return self.basePath
+       return self.basePath + self.api
     }()
     
     lazy var defaultResultLimit: Int = {
@@ -88,5 +101,8 @@ class FlowAPI {
     lazy var albumsEndpoint: AlbumEndpoint = {
         return self.albums
     }()
-
+    
+    lazy var authenticateEndpoint: AuthenticateEndpoint = {
+        return self.authenticate
+    }()
 }

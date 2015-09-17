@@ -13,7 +13,7 @@ class RemoteReplicator: ReplicatorProtocol {
     private var httpClient:HTTPClient!
     private var flowAPI:FlowAPI!
     private var token:String!
-    private var persistenceManager:PersistenceManager!
+    //private var persistenceManager:PersistenceManager!
     private var isTokenPresent:Bool!
     
     //Utilize Singleton pattern by instanciating Replicator only once.
@@ -28,7 +28,7 @@ class RemoteReplicator: ReplicatorProtocol {
     init() {
         self.httpClient = HTTPClient()
         self.flowAPI = FlowAPI.sharedInstance
-        self.persistenceManager = PersistenceManager()
+        //self.persistenceManager = PersistenceManager.sharedInstance
         isTokenPresent = self.checkIfTokenIsPresent()
     }
     
@@ -41,8 +41,7 @@ class RemoteReplicator: ReplicatorProtocol {
         
         switch endpoint {
             case .News:
-                //set query parameters:
-                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                //set query parameters
                 let params:Dictionary<String,AnyObject> = [
                     APIParameters.fields.rawValue:[
                         NewsAttributes.title.rawValue,
@@ -51,81 +50,100 @@ class RemoteReplicator: ReplicatorProtocol {
                     ],
                     APIParameters.limit.rawValue:flowAPI.defaultResultLimit,
                     APIParameters.sort.rawValue:NewsAttributes.date.rawValue,
-                    APIParameters.order.rawValue:APIParameters.asc.rawValue,
-                    APIParameters.token.rawValue:token
+                    APIParameters.order.rawValue:APIParameters.asc.rawValue
                 ]
-                doRequest(createRequestURL(flowAPI.newsEndpoint.getPath(),params: params), entityType: EntityType.News)
+                //Set additional headers
+                let headers:Dictionary<String, AnyObject> = [APIHeaders.authorization.rawValue:token]
+                doRequest(createRequestURL(flowAPI.newsEndpoint.getPath(),params: params, headers:headers), entityType: EntityType.News)
                 break
             case .Artists:
-                //set query parameters:
-                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                //set query parameters
                 let params:Dictionary<String,AnyObject> = [
                    APIParameters.token.rawValue:token
                 ]
-
-                doRequest(createRequestURL(flowAPI.artistsEndpoint.getPath(),params: params), entityType: EntityType.Artist)
+                let headers:Dictionary<String, AnyObject> = [APIHeaders.authorization.rawValue:token]
+                doRequest(createRequestURL(flowAPI.artistsEndpoint.getPath(),params: params, headers:headers), entityType: EntityType.Artist)
                 break
             case .Tracks:
-                //set query parameters:
-                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                //set query parameters
                 let params:Dictionary<String,AnyObject> = [
                     APIParameters.token.rawValue:token
                 ]
-
-                doRequest(createRequestURL(flowAPI.tracksEndpoint.getPath(),params: params), entityType: EntityType.Track)
+                //Set additional headers
+                let headers:Dictionary<String, AnyObject> = [APIHeaders.authorization.rawValue:token]
+                doRequest(createRequestURL(flowAPI.tracksEndpoint.getPath(),params: params, headers:headers), entityType: EntityType.Track)
                 break
             case .Albums:
-                //set query parameters:
-                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                //set query parameters
                 let params:Dictionary<String,AnyObject> = [
                     APIParameters.token.rawValue:token
                 ]
-                doRequest(createRequestURL(flowAPI.albumsEndpoint.getPath(),params: params), entityType: EntityType.Album)
+                //Set additional headers
+                let headers:Dictionary<String, AnyObject> = [APIHeaders.authorization.rawValue:token]
+                doRequest(createRequestURL(flowAPI.albumsEndpoint.getPath(),params: params, headers:headers), entityType: EntityType.Album)
                 break
             case .Events:
-                //set query parameters:
-                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                //set query parameters
                 let params:Dictionary<String,AnyObject> = [
                     APIParameters.token.rawValue:token
                 ]
-                doRequest(createRequestURL(flowAPI.eventsEndpoint.getPath(),params: params), entityType: EntityType.Event)
+                //Set additional headers
+                let headers:Dictionary<String, AnyObject> = [APIHeaders.authorization.rawValue:token]
+                doRequest(createRequestURL(flowAPI.eventsEndpoint.getPath(),params: params, headers:headers), entityType: EntityType.Event)
                 break
             case .Videos:
-                //set query parameters:
-                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                //set query parameters
                 let params:Dictionary<String,AnyObject> = [
                     APIParameters.token.rawValue:token
                 ]
-                doRequest(createRequestURL(flowAPI.videosEndpoint.getPath(),params: params), entityType: EntityType.Video)
+                //Set additional headers
+                let headers:Dictionary<String, AnyObject> = [APIHeaders.authorization.rawValue:token]
+                doRequest(createRequestURL(flowAPI.videosEndpoint.getPath(),params: params, headers:headers), entityType: EntityType.Video)
                 break
             case .Genres:
-                //set query parameters:
-                //fields=title,date,message&limit=4000&sort=date&order=asc&token=foobar
+                //set query parameters
                 let params:Dictionary<String,AnyObject> = [
                     APIParameters.token.rawValue:token
                 ]
-                doRequest(createRequestURL(flowAPI.genresEndpoint.getPath(),params: params), entityType: EntityType.Genre)
+                //Set additional headers
+                let headers:Dictionary<String, AnyObject> = [APIHeaders.authorization.rawValue:token]
+                doRequest(createRequestURL(flowAPI.genresEndpoint.getPath(),params: params, headers:headers), entityType: EntityType.Genre)
+                break
+            case .Authenticate:
+                //set additional headers
+                print("authenticate")
                 break
         }
     }
-        
-    private func createRequestURL(endpoint: String, params: Dictionary<String,AnyObject>? = nil) -> NSMutableURLRequest {
+    
+    private func createRequestURL(endpoint: String, params: Dictionary<String, AnyObject>? = nil, headers: Dictionary<String, AnyObject>? = nil) -> NSMutableURLRequest {
         var request: NSMutableURLRequest!
 
-        guard let parameters = params where parameters.count > 0 else {
-            request = NSMutableURLRequest(URL: NSURL(string: String(format: "%@%@%@", flowAPI.defaultBasePath, endpoint, token))!)
+        print("token to use: \(token)")
+        
+        if params != nil {
+            if params!.count > 0 {
+                let url:String = flowAPI.defaultBasePath + endpoint + httpClient.queryBuilder(params!)
+                request = NSMutableURLRequest(URL: NSURL(string: url)!)
+            }
+        } else {
+            let url:String = flowAPI.defaultBasePath + endpoint
+            print("requestURL: \(url)")
+            request = NSMutableURLRequest(URL: NSURL(string: url)!)
+        }
             
-            return request
+        if headers != nil {
+            if headers!.count > 0 {
+                for (key,value) in headers! {
+                    print("header: \(key):\(value)")
+                }
+            }
         }
         
-        let url:String = flowAPI.defaultBasePath + endpoint + httpClient.queryBuilder(params!)
-        print("requestURL: \(url)")
-
-        request = NSMutableURLRequest(URL: NSURL(string: url)!)
         
         return request
     }
-
+   
     private func doRequest(request: NSMutableURLRequest, entityType:EntityType) {
         httpClient.doGet(request) { (data, error, httpStatusCode) -> Void in
             
@@ -157,25 +175,28 @@ class RemoteReplicator: ReplicatorProtocol {
     func processData(response:Array<AnyObject>, entity:EntityType){
         switch entity {
             case .News:
-                persistenceManager.saveItems(response, entity: entity)
+                //persistenceManager.saveItems(response, entity: entity)
+                flowAPI.newsEndpoint.saveNewsList(response)
                 break
             case .Artist:
-                persistenceManager.saveItems(response, entity: entity)
+                //persistenceManager.saveItems(response, entity: entity)
                 break
             case .Track:
-                persistenceManager.saveItems(response, entity: entity)
+                //persistenceManager.saveItems(response, entity: entity)
                 break
             case .Album:
-                persistenceManager.saveItems(response, entity: entity)
+                //persistenceManager.saveItems(response, entity: entity)
                 break
             case .Event:
-                persistenceManager.saveItems(response, entity: entity)
+                //persistenceManager.saveItems(response, entity: entity)
                 break
             case .Video:
-                persistenceManager.saveItems(response, entity: entity)
+                //persistenceManager.saveItems(response, entity: entity)
                 break
             case .Genre:
-                persistenceManager.saveItems(response, entity: entity)
+                //persistenceManager.saveItems(response, entity: entity)
+                break
+            default:
                 break
         }
     }
