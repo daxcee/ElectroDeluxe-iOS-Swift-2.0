@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C31331231B878A2D00FAED26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31331221B878A2D00FAED26 /* AppDelegate.swift */; };
-		C31331251B878A2D00FAED26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31331241B878A2D00FAED26 /* ViewController.swift */; };
 		C31331281B878A2D00FAED26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C31331261B878A2D00FAED26 /* Main.storyboard */; };
 		C313312B1B878A2D00FAED26 /* ElectroDeluxe_Swift2_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C31331291B878A2D00FAED26 /* ElectroDeluxe_Swift2_0.xcdatamodeld */; };
 		C313312D1B878A2D00FAED26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C313312C1B878A2D00FAED26 /* Assets.xcassets */; };
@@ -29,19 +28,37 @@
 		C313F2131B9BC3FB00C8698C /* FlowAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313F2121B9BC3FB00C8698C /* FlowAPI.swift */; };
 		C313F2161B9BC9CD00C8698C /* AlbumEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313F2151B9BC9CD00C8698C /* AlbumEndpoint.swift */; };
 		C313F21A1B9BCA3A00C8698C /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313F2181B9BCA3A00C8698C /* Album.swift */; };
-		C355E92C1B9E390200743454 /* TokenMissingException.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355E92B1B9E390200743454 /* TokenMissingException.swift */; settings = {ASSET_TAGS = (); }; };
+		C33CA1451BAA606100982325 /* SidebarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33CA1441BAA606100982325 /* SidebarTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C33CA1471BAA606900982325 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33CA1461BAA606900982325 /* Sidebar.swift */; settings = {ASSET_TAGS = (); }; };
+		C355E92C1B9E390200743454 /* TokenMissingException.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355E92B1B9E390200743454 /* TokenMissingException.swift */; };
+		C370D24C1BA70E920082B9A4 /* FlowAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C370D24B1BA70E920082B9A4 /* FlowAuthenticator.swift */; settings = {ASSET_TAGS = (); }; };
+		C370D24E1BA718620082B9A4 /* FacebookLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C370D24D1BA718620082B9A4 /* FacebookLoginManager.swift */; settings = {ASSET_TAGS = (); }; };
+		C370D2501BA726900082B9A4 /* FacebookLoginException.swift in Sources */ = {isa = PBXBuildFile; fileRef = C370D24F1BA726900082B9A4 /* FacebookLoginException.swift */; settings = {ASSET_TAGS = (); }; };
+		C370D2521BA744920082B9A4 /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C370D2511BA744920082B9A4 /* FacebookLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C370D2561BA7672C0082B9A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C370D2551BA7672C0082B9A4 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		C37A4A511B99C70F0018FBDB /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37A4A501B99C70F0018FBDB /* StringExtension.swift */; };
 		C37A4A531B99FA9B0018FBDB /* NewsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37A4A521B99FA9B0018FBDB /* NewsEndpoint.swift */; };
 		C37A4A571B9A1F3A0018FBDB /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37A4A551B9A1F3A0018FBDB /* News.swift */; };
 		C37A4A5A1B9A20420018FBDB /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37A4A591B9A20420018FBDB /* EntityType.swift */; };
+		C3A2BED21BAAF06300C699DB /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2BED11BAAF06300C699DB /* MainTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		C3A2BED41BAAF22500C699DB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A2BED31BAAF22500C699DB /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		C3AA8FD71B990C850007BE9C /* RemoteReplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA8FD61B990C850007BE9C /* RemoteReplicator.swift */; };
+		C3AEE16B1BA7D947006D78E1 /* FacebookGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AEE16A1BA7D947006D78E1 /* FacebookGraph.swift */; settings = {ASSET_TAGS = (); }; };
+		C3AEE16D1BA7E9DA006D78E1 /* FacebookReadPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AEE16C1BA7E9DA006D78E1 /* FacebookReadPermissions.swift */; settings = {ASSET_TAGS = (); }; };
 		C3BF00AB1B878D4000201D4F /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF00AA1B878D4000201D4F /* PersistenceManager.swift */; };
 		C3BF00B31B878D9A00201D4F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF00B21B878D9A00201D4F /* HTTPClient.swift */; };
 		C3BF00B71B878DB500201D4F /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF00B61B878DB500201D4F /* TimeFormatter.swift */; };
 		C3BF00BB1B878E3100201D4F /* ReplicatorProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF00BA1B878E3100201D4F /* ReplicatorProtocal.swift */; };
 		C3BF00D61B87940000201D4F /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF00D21B87940000201D4F /* Artist.swift */; };
 		C3BF00D81B87940000201D4F /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BF00D41B87940000201D4F /* Track.swift */; };
-		C3ED94C91B9DF0500014A8BD /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED94C81B9DF0500014A8BD /* HTTPStatusCode.swift */; settings = {ASSET_TAGS = (); }; };
+		C3CF0AFA1BAB18B10057A263 /* RGBColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF0AF91BAB18B10057A263 /* RGBColorPicker.swift */; settings = {ASSET_TAGS = (); }; };
+		C3CF0AFC1BAB1CB50057A263 /* SidebarHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF0AFB1BAB1CB50057A263 /* SidebarHeaderLabel.swift */; settings = {ASSET_TAGS = (); }; };
+		C3CF0AFE1BAB27DF0057A263 /* SidebarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CF0AFD1BAB27DF0057A263 /* SidebarTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		C3D7F4231BA9ADC600EA8BB5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7F4221BA9ADC600EA8BB5 /* MainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C3D7F4261BA9BC5500EA8BB5 /* RegistreredUserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D7F4251BA9BC5500EA8BB5 /* RegistreredUserDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		C3ED94C91B9DF0500014A8BD /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED94C81B9DF0500014A8BD /* HTTPStatusCode.swift */; };
+		C3F43A6E1BA6DA0F002F3B0A /* AuthenticateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F43A6D1BA6DA0F002F3B0A /* AuthenticateEndpoint.swift */; settings = {ASSET_TAGS = (); }; };
+		CF810061A2D8CE9625AB9D49 /* Pods_ElectroDeluxe_Swift2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E4B7E43AFCB461C48942B7 /* Pods_ElectroDeluxe_Swift2_0.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +79,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		417DB1C3B3283D11F564C804 /* Pods-ElectroDeluxe-Swift2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroDeluxe-Swift2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ElectroDeluxe-Swift2.0/Pods-ElectroDeluxe-Swift2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		85E4B7E43AFCB461C48942B7 /* Pods_ElectroDeluxe_Swift2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroDeluxe_Swift2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45F0E3801035FFD3940FF76 /* Pods-ElectroDeluxe-Swift2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroDeluxe-Swift2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-ElectroDeluxe-Swift2.0/Pods-ElectroDeluxe-Swift2.0.release.xcconfig"; sourceTree = "<group>"; };
 		C313311F1B878A2D00FAED26 /* ElectroDeluxe-Swift2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ElectroDeluxe-Swift2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31331221B878A2D00FAED26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C31331241B878A2D00FAED26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C31331271B878A2D00FAED26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C313312A1B878A2D00FAED26 /* ElectroDeluxe_Swift2_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ElectroDeluxe_Swift2_0.xcdatamodel; sourceTree = "<group>"; };
 		C313312C1B878A2D00FAED26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,19 +109,36 @@
 		C313F2121B9BC3FB00C8698C /* FlowAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowAPI.swift; sourceTree = "<group>"; };
 		C313F2151B9BC9CD00C8698C /* AlbumEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumEndpoint.swift; sourceTree = "<group>"; };
 		C313F2181B9BCA3A00C8698C /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Album.swift; path = ../Album.swift; sourceTree = "<group>"; };
+		C33CA1441BAA606100982325 /* SidebarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarTableViewController.swift; sourceTree = "<group>"; };
+		C33CA1461BAA606900982325 /* Sidebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		C355E92B1B9E390200743454 /* TokenMissingException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenMissingException.swift; sourceTree = "<group>"; };
+		C370D24B1BA70E920082B9A4 /* FlowAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowAuthenticator.swift; sourceTree = "<group>"; };
+		C370D24D1BA718620082B9A4 /* FacebookLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginManager.swift; sourceTree = "<group>"; };
+		C370D24F1BA726900082B9A4 /* FacebookLoginException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginException.swift; sourceTree = "<group>"; };
+		C370D2511BA744920082B9A4 /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
+		C370D2551BA7672C0082B9A4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C37A4A501B99C70F0018FBDB /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		C37A4A521B99FA9B0018FBDB /* NewsEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsEndpoint.swift; sourceTree = "<group>"; };
 		C37A4A551B9A1F3A0018FBDB /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		C37A4A591B9A20420018FBDB /* EntityType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
+		C3A2BED11BAAF06300C699DB /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		C3A2BED31BAAF22500C699DB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C3AA8FD61B990C850007BE9C /* RemoteReplicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteReplicator.swift; sourceTree = "<group>"; };
+		C3AEE16A1BA7D947006D78E1 /* FacebookGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookGraph.swift; sourceTree = "<group>"; };
+		C3AEE16C1BA7E9DA006D78E1 /* FacebookReadPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookReadPermissions.swift; sourceTree = "<group>"; };
 		C3BF00AA1B878D4000201D4F /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		C3BF00B21B878D9A00201D4F /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		C3BF00B61B878DB500201D4F /* TimeFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
 		C3BF00BA1B878E3100201D4F /* ReplicatorProtocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplicatorProtocal.swift; sourceTree = "<group>"; };
 		C3BF00D21B87940000201D4F /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = ../Artist.swift; sourceTree = "<group>"; };
 		C3BF00D41B87940000201D4F /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = ../Track.swift; sourceTree = "<group>"; };
+		C3CF0AF91BAB18B10057A263 /* RGBColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBColorPicker.swift; sourceTree = "<group>"; };
+		C3CF0AFB1BAB1CB50057A263 /* SidebarHeaderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarHeaderLabel.swift; sourceTree = "<group>"; };
+		C3CF0AFD1BAB27DF0057A263 /* SidebarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarTableViewCell.swift; sourceTree = "<group>"; };
+		C3D7F4221BA9ADC600EA8BB5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C3D7F4251BA9BC5500EA8BB5 /* RegistreredUserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistreredUserDelegate.swift; sourceTree = "<group>"; };
 		C3ED94C81B9DF0500014A8BD /* HTTPStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		C3F43A6D1BA6DA0F002F3B0A /* AuthenticateEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticateEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF810061A2D8CE9625AB9D49 /* Pods_ElectroDeluxe_Swift2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +167,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		148B650823445FBFE19E5AAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				417DB1C3B3283D11F564C804 /* Pods-ElectroDeluxe-Swift2.0.debug.xcconfig */,
+				B45F0E3801035FFD3940FF76 /* Pods-ElectroDeluxe-Swift2.0.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AA7F3EA86CE78460D6B154EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85E4B7E43AFCB461C48942B7 /* Pods_ElectroDeluxe_Swift2_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C31331161B878A2D00FAED26 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +191,8 @@
 				C31331391B878A2D00FAED26 /* ElectroDeluxe-Swift2.0Tests */,
 				C31331441B878A2D00FAED26 /* ElectroDeluxe-Swift2.0UITests */,
 				C31331201B878A2D00FAED26 /* Products */,
+				148B650823445FBFE19E5AAC /* Pods */,
+				AA7F3EA86CE78460D6B154EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,7 +214,6 @@
 				C3BF00A81B878D1600201D4F /* Controllers */,
 				C3BF00B11B878D8A00201D4F /* Utils */,
 				C31331221B878A2D00FAED26 /* AppDelegate.swift */,
-				C31331241B878A2D00FAED26 /* ViewController.swift */,
 				C31331261B878A2D00FAED26 /* Main.storyboard */,
 				C313312C1B878A2D00FAED26 /* Assets.xcassets */,
 				C313312E1B878A2D00FAED26 /* LaunchScreen.storyboard */,
@@ -219,27 +274,68 @@
 			children = (
 				C313F1FA1B9B8BF900C8698C /* APIEndpoint.swift */,
 				C37A4A521B99FA9B0018FBDB /* NewsEndpoint.swift */,
-				C313F1FC1B9BC0D900C8698C /* ArtistEndpoint.swift */,
 				C313F1FE1B9BC0E500C8698C /* TrackEndpoint.swift */,
 				C313F2001B9BC0F100C8698C /* VideoEndpoint.swift */,
 				C313F2021B9BC0F800C8698C /* GenreEndpoint.swift */,
 				C313F2041B9BC10200C8698C /* EventEndpoint.swift */,
 				C313F2151B9BC9CD00C8698C /* AlbumEndpoint.swift */,
+				C313F1FC1B9BC0D900C8698C /* ArtistEndpoint.swift */,
+				C3F43A6D1BA6DA0F002F3B0A /* AuthenticateEndpoint.swift */,
 			);
 			name = Endpoints;
+			sourceTree = "<group>";
+		};
+		C33CA1431BAA604C00982325 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				C33CA1441BAA606100982325 /* SidebarTableViewController.swift */,
+				C33CA1461BAA606900982325 /* Sidebar.swift */,
+				C3CF0AFB1BAB1CB50057A263 /* SidebarHeaderLabel.swift */,
+				C3CF0AFD1BAB27DF0057A263 /* SidebarTableViewCell.swift */,
+			);
+			name = Sidebar;
 			sourceTree = "<group>";
 		};
 		C355E92D1B9E3A5D00743454 /* Exceptions */ = {
 			isa = PBXGroup;
 			children = (
 				C355E92B1B9E390200743454 /* TokenMissingException.swift */,
+				C370D24F1BA726900082B9A4 /* FacebookLoginException.swift */,
 			);
 			name = Exceptions;
+			sourceTree = "<group>";
+		};
+		C370D24A1BA70E800082B9A4 /* Authenticators */ = {
+			isa = PBXGroup;
+			children = (
+				C370D24B1BA70E920082B9A4 /* FlowAuthenticator.swift */,
+				C370D24D1BA718620082B9A4 /* FacebookLoginManager.swift */,
+				C3AEE16C1BA7E9DA006D78E1 /* FacebookReadPermissions.swift */,
+			);
+			name = Authenticators;
+			sourceTree = "<group>";
+		};
+		C3AEE1681BA7D924006D78E1 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				C313F2121B9BC3FB00C8698C /* FlowAPI.swift */,
+				C313F2141B9BC53800C8698C /* Endpoints */,
+			);
+			name = Flow;
+			sourceTree = "<group>";
+		};
+		C3AEE1691BA7D938006D78E1 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				C3AEE16A1BA7D947006D78E1 /* FacebookGraph.swift */,
+			);
+			name = Facebook;
 			sourceTree = "<group>";
 		};
 		C3BF00A61B878CFE00201D4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C370D2551BA7672C0082B9A4 /* User.swift */,
 				C313F2181B9BCA3A00C8698C /* Album.swift */,
 				C313F2071B9BC32700C8698C /* Event.swift */,
 				C313F2091B9BC32700C8698C /* Video.swift */,
@@ -255,9 +351,11 @@
 		C3BF00A71B878D0F00201D4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C33CA1431BAA604C00982325 /* Sidebar */,
+				C3D7F4241BA9B38A00EA8BB5 /* Login */,
+				C3BF00AE1B878D6400201D4F /* Main */,
 				C3BF00B01B878D7600201D4F /* Tracks */,
 				C3BF00AF1B878D6A00201D4F /* Artists */,
-				C3BF00AE1B878D6400201D4F /* Main */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -273,8 +371,9 @@
 		C3BF00A91B878D2800201D4F /* API */ = {
 			isa = PBXGroup;
 			children = (
-				C313F2121B9BC3FB00C8698C /* FlowAPI.swift */,
-				C313F2141B9BC53800C8698C /* Endpoints */,
+				C3AEE1691BA7D938006D78E1 /* Facebook */,
+				C3AEE1681BA7D924006D78E1 /* Flow */,
+				C370D24A1BA70E800082B9A4 /* Authenticators */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -282,6 +381,9 @@
 		C3BF00AE1B878D6400201D4F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C3D7F4221BA9ADC600EA8BB5 /* MainViewController.swift */,
+				C3A2BED31BAAF22500C699DB /* TableViewController.swift */,
+				C3A2BED11BAAF06300C699DB /* MainTableViewCell.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -309,8 +411,18 @@
 				C313F1F71B9B895200C8698C /* CoreData */,
 				C313F1F91B9B896600C8698C /* HTTPClient */,
 				C313F1F81B9B895F00C8698C /* Replicator */,
+				C3CF0AF91BAB18B10057A263 /* RGBColorPicker.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		C3D7F4241BA9B38A00EA8BB5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C370D2511BA744920082B9A4 /* FacebookLoginViewController.swift */,
+				C3D7F4251BA9BC5500EA8BB5 /* RegistreredUserDelegate.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,9 +432,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C313314A1B878A2D00FAED26 /* Build configuration list for PBXNativeTarget "ElectroDeluxe-Swift2.0" */;
 			buildPhases = (
+				AB69F5BE3AB9DC61FED3357B /* Check Pods Manifest.lock */,
 				C313311B1B878A2D00FAED26 /* Sources */,
 				C313311C1B878A2D00FAED26 /* Frameworks */,
 				C313311D1B878A2D00FAED26 /* Resources */,
+				8DE42E406BA1704BE7295AEC /* Embed Pods Frameworks */,
+				E98BF2627C5A382B22814C2A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -381,6 +496,7 @@
 				TargetAttributes = {
 					C313311E1B878A2D00FAED26 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = XHKG545Y8P;
 					};
 					C31331351B878A2D00FAED26 = {
 						CreatedOnToolsVersion = 7.0;
@@ -439,21 +555,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DE42E406BA1704BE7295AEC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ElectroDeluxe-Swift2.0/Pods-ElectroDeluxe-Swift2.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB69F5BE3AB9DC61FED3357B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E98BF2627C5A382B22814C2A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ElectroDeluxe-Swift2.0/Pods-ElectroDeluxe-Swift2.0-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C313311B1B878A2D00FAED26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C37A4A5A1B9A20420018FBDB /* EntityType.swift in Sources */,
+				C3F43A6E1BA6DA0F002F3B0A /* AuthenticateEndpoint.swift in Sources */,
 				C3BF00BB1B878E3100201D4F /* ReplicatorProtocal.swift in Sources */,
 				C313F21A1B9BCA3A00C8698C /* Album.swift in Sources */,
+				C370D24E1BA718620082B9A4 /* FacebookLoginManager.swift in Sources */,
+				C3D7F4231BA9ADC600EA8BB5 /* MainViewController.swift in Sources */,
 				C313F2131B9BC3FB00C8698C /* FlowAPI.swift in Sources */,
-				C31331251B878A2D00FAED26 /* ViewController.swift in Sources */,
 				C313F2051B9BC10200C8698C /* EventEndpoint.swift in Sources */,
+				C3CF0AFE1BAB27DF0057A263 /* SidebarTableViewCell.swift in Sources */,
 				C3BF00B71B878DB500201D4F /* TimeFormatter.swift in Sources */,
+				C370D2501BA726900082B9A4 /* FacebookLoginException.swift in Sources */,
+				C3A2BED21BAAF06300C699DB /* MainTableViewCell.swift in Sources */,
 				C37A4A571B9A1F3A0018FBDB /* News.swift in Sources */,
 				C313F1FB1B9B8BF900C8698C /* APIEndpoint.swift in Sources */,
+				C3CF0AFC1BAB1CB50057A263 /* SidebarHeaderLabel.swift in Sources */,
+				C3AEE16D1BA7E9DA006D78E1 /* FacebookReadPermissions.swift in Sources */,
 				C313312B1B878A2D00FAED26 /* ElectroDeluxe_Swift2_0.xcdatamodeld in Sources */,
+				C370D24C1BA70E920082B9A4 /* FlowAuthenticator.swift in Sources */,
+				C370D2561BA7672C0082B9A4 /* User.swift in Sources */,
+				C3A2BED41BAAF22500C699DB /* TableViewController.swift in Sources */,
+				C33CA1471BAA606900982325 /* Sidebar.swift in Sources */,
 				C355E92C1B9E390200743454 /* TokenMissingException.swift in Sources */,
 				C313F20F1B9BC32700C8698C /* Video.swift in Sources */,
 				C3AA8FD71B990C850007BE9C /* RemoteReplicator.swift in Sources */,
@@ -462,10 +637,15 @@
 				C313F2031B9BC0F800C8698C /* GenreEndpoint.swift in Sources */,
 				C3BF00B31B878D9A00201D4F /* HTTPClient.swift in Sources */,
 				C3BF00D61B87940000201D4F /* Artist.swift in Sources */,
+				C3CF0AFA1BAB18B10057A263 /* RGBColorPicker.swift in Sources */,
+				C33CA1451BAA606100982325 /* SidebarTableViewController.swift in Sources */,
+				C370D2521BA744920082B9A4 /* FacebookLoginViewController.swift in Sources */,
 				C31331231B878A2D00FAED26 /* AppDelegate.swift in Sources */,
 				C313F2161B9BC9CD00C8698C /* AlbumEndpoint.swift in Sources */,
 				C313F20D1B9BC32700C8698C /* Event.swift in Sources */,
 				C37A4A511B99C70F0018FBDB /* StringExtension.swift in Sources */,
+				C3D7F4261BA9BC5500EA8BB5 /* RegistreredUserDelegate.swift in Sources */,
+				C3AEE16B1BA7D947006D78E1 /* FacebookGraph.swift in Sources */,
 				C313F1FD1B9BC0D900C8698C /* ArtistEndpoint.swift in Sources */,
 				C3BF00AB1B878D4000201D4F /* PersistenceManager.swift in Sources */,
 				C3BF00D81B87940000201D4F /* Track.swift in Sources */,
@@ -613,13 +793,17 @@
 		};
 		C313314B1B878A2D00FAED26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 417DB1C3B3283D11F564C804 /* Pods-ElectroDeluxe-Swift2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ElectroDeluxe-Swift2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.srmds.ElectroDeluxe-Swift2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -628,13 +812,17 @@
 		};
 		C313314C1B878A2D00FAED26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B45F0E3801035FFD3940FF76 /* Pods-ElectroDeluxe-Swift2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ElectroDeluxe-Swift2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.srmds.ElectroDeluxe-Swift2-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
