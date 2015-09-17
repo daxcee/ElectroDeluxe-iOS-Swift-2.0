@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1336B852-7F8F-4D33-B1EB-072948DEEF19</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ElectroDeluxe-Swift2.0</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>94269B37605856869B157FD9027EDC7223A082EC</key>
+		<string>github.com:srmds/ElectroDeluxe-iOS-Swift-2.0.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ElectroDeluxe-Swift2.0.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>94269B37605856869B157FD9027EDC7223A082EC</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:srmds/ElectroDeluxe-iOS-Swift-2.0.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>94269B37605856869B157FD9027EDC7223A082EC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>94269B37605856869B157FD9027EDC7223A082EC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ElectroDeluxe-Swift2.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
