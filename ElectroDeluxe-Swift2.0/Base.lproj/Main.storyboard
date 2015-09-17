@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iMc-2t-iG6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Facebook Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FacebookLoginViewController" customModule="ElectroDeluxe_Swift2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,135 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfz-u9-bGk">
+                                <rect key="frame" x="244" y="285" width="112" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="a2Q-Ea-A2r"/>
+                                </constraints>
+                                <state key="normal" title="FB Login"/>
+                                <connections>
+                                    <action selector="fbLoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5UD-LL-qEE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wfz-u9-bGk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FOG-OV-UrW"/>
+                            <constraint firstItem="Wfz-u9-bGk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hfX-65-2Qm"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hUk-lj-v3w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1300" y="1203"/>
+        </scene>
+        <!--Electro Deluxe-->
+        <scene sceneID="pBU-fy-NDV">
+            <objects>
+                <viewController id="PXl-yc-csk" customClass="MainViewController" customModule="ElectroDeluxe_Swift2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SSW-rK-R5C"/>
+                        <viewControllerLayoutGuide type="bottom" id="llc-du-iIj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NaR-Yr-PPf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S8d-nZ-WfR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainCell" rowHeight="101" id="HGd-ff-uS8" customClass="MainTableViewCell" customModule="ElectroDeluxe_Swift2_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HGd-ff-uS8" id="f0a-bq-rtX">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4ri-hs-cjd">
+                                                    <rect key="frame" x="15" y="4" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="ggS-85-nF3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="030303 Dj's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4D-BJ-vbX">
+                                                    <rect key="frame" x="113" y="22" width="420" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracktitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svo-YL-NP4">
+                                                    <rect key="frame" x="113" y="51" width="420" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="svo-YL-NP4" secondAttribute="trailing" constant="59" id="Api-Og-Px2"/>
+                                                <constraint firstItem="svo-YL-NP4" firstAttribute="top" secondItem="J4D-BJ-vbX" secondAttribute="bottom" constant="8" symbolic="YES" id="EPr-jb-wrz"/>
+                                                <constraint firstItem="4ri-hs-cjd" firstAttribute="top" secondItem="f0a-bq-rtX" secondAttribute="topMargin" constant="-4" id="Jhe-HM-NXw"/>
+                                                <constraint firstItem="svo-YL-NP4" firstAttribute="trailing" secondItem="J4D-BJ-vbX" secondAttribute="trailing" id="KXC-MV-clY"/>
+                                                <constraint firstItem="svo-YL-NP4" firstAttribute="leading" secondItem="4ri-hs-cjd" secondAttribute="trailing" constant="8" symbolic="YES" id="L0r-7J-O5i"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="svo-YL-NP4" secondAttribute="bottom" constant="20" id="L0v-h8-bUV"/>
+                                                <constraint firstItem="svo-YL-NP4" firstAttribute="leading" secondItem="J4D-BJ-vbX" secondAttribute="leading" id="TPS-kY-XRe"/>
+                                                <constraint firstItem="4ri-hs-cjd" firstAttribute="centerY" secondItem="f0a-bq-rtX" secondAttribute="centerY" constant="-1.5" id="d5F-Y6-Rds"/>
+                                                <constraint firstItem="4ri-hs-cjd" firstAttribute="leading" secondItem="f0a-bq-rtX" secondAttribute="leadingMargin" constant="7" id="qyw-sw-meo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="trackArtistLbl" destination="J4D-BJ-vbX" id="TQN-ug-dkA"/>
+                                            <outlet property="trackArtworkImgView" destination="4ri-hs-cjd" id="Q5o-zI-A10"/>
+                                            <outlet property="trackTitleLbl" destination="svo-YL-NP4" id="Zi1-vz-OCP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PXl-yc-csk" id="fem-EN-8tX"/>
+                                    <outlet property="delegate" destination="PXl-yc-csk" id="0np-oq-HVk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="S8d-nZ-WfR" secondAttribute="trailing" id="2mn-19-AiD"/>
+                            <constraint firstItem="S8d-nZ-WfR" firstAttribute="bottom" secondItem="llc-du-iIj" secondAttribute="top" id="CJF-Am-Jgd"/>
+                            <constraint firstItem="S8d-nZ-WfR" firstAttribute="top" secondItem="SSW-rK-R5C" secondAttribute="bottom" constant="-64" id="bfy-bR-jq4"/>
+                            <constraint firstItem="S8d-nZ-WfR" firstAttribute="leading" secondItem="NaR-Yr-PPf" secondAttribute="leading" id="xdk-pH-qcS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Electro Deluxe" id="1xY-9E-xWM"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="S8d-nZ-WfR" id="BY4-sk-lmE"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="SMt-He-BSA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ga-1c-atj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="456"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EwT-8p-aFi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iMc-2t-iG6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DMn-PX-vXE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PXl-yc-csk" kind="relationship" relationship="rootViewController" id="GxM-y6-2E7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Cp-z3-yGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="456"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="scLogo" width="400" height="400"/>
+    </resources>
 </document>
